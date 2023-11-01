@@ -7,6 +7,12 @@ export default function Navbar() {
         <Link href='/' className='text-amber-600'>
           My Restaurant
         </Link>
+        <Link
+          href='/create'
+          className='px-4 py-1.5 rounded bg-amber-100/60 text-amber-700 text-xs hover:bg-amber-600 hover:text-white'
+        >
+          Create
+        </Link>
       </div>
     </div>
   )

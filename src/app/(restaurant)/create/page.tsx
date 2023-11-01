@@ -78,7 +78,7 @@ export default function Page() {
   }, [file])
 
   return (
-    <div className='mt-12 p-4 rounded bg-white max-w-[400px] mx-auto'>
+    <div className='mt-12 p-4 rounded bg-white max-w-[400px] mx-auto mb-10'>
       <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
         <div className='h-fit relative'>
           <label className='text-sm text-gray-700'>name</label>
