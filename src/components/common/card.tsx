@@ -1,39 +1,45 @@
 'use client'
 
-import { Restaurtant } from '@/model/restaurant'
+import { Restaurant } from '@/model/restaurant'
 import { Star } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Card({
   name,
   rating,
-  catagory,
+  category,
   rangePrice,
   isOpenNow,
   id,
-}: Restaurtant) {
+  url,
+}: Restaurant) {
   return (
     <div className='h-fit w-full'>
-      <div className='h-40 bg-gray-200'></div>
+      <div className='h-40'>
+        <img className='w-full h-full object-cover' src={url} alt='image' />
+      </div>
       <p className='text-lg font-medium text-gray-900 mt-1'>{name}</p>
       <div className='mt-1 flex gap-1'>
         {[1, 2, 3, 4, 5].map((r) => {
           if (r <= rating) {
-            return <Star key={r} width={12} height={12} fill='#f59e0b' stroke='#f59e0b' />
+            return (
+              <Star
+                key={r}
+                width={12}
+                height={12}
+                fill='#f59e0b'
+                stroke='#f59e0b'
+              />
+            )
           }
           return (
-            <Star
-              key={r}
-              width={12}
-              height={12}
-              className='text-gray-400'
-            />
+            <Star key={r} width={12} height={12} className='text-gray-400' />
           )
         })}
       </div>
       <div className='flex justify-between items-center mt-1'>
         <div className='flex gap-2 items-center'>
-          <span className='text-sm text-gray-400'>{catagory}</span>
+          <span className='text-sm text-gray-400'>{category}</span>
           <div className='w-1.5 h-1.5 rounded-full bg-gray-800' />
           <span className='text-sm text-gray-400'>{rangePrice} k</span>
         </div>
