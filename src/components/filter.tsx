@@ -74,8 +74,12 @@ export default function Filter({
             value={category}
           >
             <option value=''>Categories</option>
-            <option value='sundanese'>sundanese</option>
+            <option value=''>Select option</option>
             <option value='javanese'>javanese</option>
+            <option value='sundanese'>sundanese</option>
+            <option value='chinese'>chinese</option>
+            <option value='padang'>padang</option>
+            <option value='modern'>modern</option>
           </select>
         </div>
       </div>

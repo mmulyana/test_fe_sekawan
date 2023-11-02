@@ -64,7 +64,7 @@ export default function Page() {
 
       await createRestaurant(payload)
 
-        router.replace('/')
+      router.replace('/')
     } catch (error) {
       console.log(error)
     }
@@ -131,6 +131,10 @@ export default function Page() {
           >
             <option value=''>Select option</option>
             <option value='javanese'>javanese</option>
+            <option value='sundanese'>sundanese</option>
+            <option value='chinese'>chinese</option>
+            <option value='padang'>padang</option>
+            <option value='modern'>modern</option>
           </select>
           {errors.category && (
             <p className='absolute text-xs text-red-500 -bottom-[18px]'>
