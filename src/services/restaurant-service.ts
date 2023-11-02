@@ -12,18 +12,10 @@ import {
 } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
 
-export interface RestaurantI extends Restaurant {
-  reviews?: {
-    name: string
-    rating: number
-    text: string
-  }
-}
-
 export type RestaurantRequest = Omit<Restaurant, 'id'>
 
 export interface RestaurtantResponse {
-  data: RestaurantI | RestaurantI[] | null
+  data: Restaurant | Restaurant[] | null
   message: string
   status: number
 }
@@ -84,7 +76,7 @@ export async function getDetailRestaurant(
       }
     }
 
-    const result = docSnapshot.data() as RestaurantI
+    const result = docSnapshot.data() as Restaurant
 
     return {
       data: result,
@@ -110,7 +102,7 @@ export async function createRestaurant(
     const result = {
       id,
       ...payload,
-    } as RestaurantI
+    } as Restaurant
 
     return {
       data: result,

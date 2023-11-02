@@ -3,7 +3,7 @@
 import { Restaurant } from '@/model/restaurant'
 import { useEffect, useState } from 'react'
 import Card from './common/card'
-import { RestaurantI, getRestaurants } from '@/services/restaurant-service'
+import { getRestaurants } from '@/services/restaurant-service'
 
 type Props = {
   category: string
@@ -13,13 +13,13 @@ type Props = {
 
 export default function CardRestaurtant({ category, price, isOpenNow }: Props) {
   const [data, setData] = useState<Restaurant[]>([])
-  const [filteredData, setFilteredData] = useState<RestaurantI[]>([])
+  const [filteredData, setFilteredData] = useState<Restaurant[]>([])
 
   useEffect(() => {
     async function getData() {
       const data = await getRestaurants(category)
       if (data.status === 200) {
-        setData(data.data as RestaurantI[])
+        setData(data.data as Restaurant[])
       }
     }
 
@@ -50,7 +50,7 @@ function RenderData({
   data,
   isOpenNow,
 }: {
-  data: RestaurantI[]
+  data: Restaurant[]
   isOpenNow: boolean
 }) {
   if (!!isOpenNow) {
