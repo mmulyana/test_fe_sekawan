@@ -54,7 +54,7 @@ export default function FormReview({
   }
 
   return (
-    <div className='p-5'>
+    <div className='pt-5'>
       <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
         <div className='h-fit relative'>
           <label className='text-sm text-gray-700'>name</label>
@@ -100,7 +100,7 @@ export default function FormReview({
           className='bg-amber-600 text-white rounded py-1.5 w-full'
           type='submit'
         >
-          Save
+          Send Review
         </button>
       </form>
     </div>
