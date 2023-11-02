@@ -19,7 +19,7 @@ change `.env.example` to `.env.local` then put firebase config in environtment v
 npm run dev
 ```
 
-## Requirement
+## Tech stack
 
 - react.js
 - next.js 14
