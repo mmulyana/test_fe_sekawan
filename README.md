@@ -18,3 +18,12 @@ change `.env.example` to `.env.local` then put firebase config in environtment v
 ```bash
 npm run dev
 ```
+
+## Requirement
+
+- react.js
+- next.js 14
+- typescript
+- firebase
+- react-hook-form
+- zod
